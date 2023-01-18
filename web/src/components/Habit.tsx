@@ -1,6 +1,10 @@
-export function Habit() {
+interface HabitProps {
+  completed: number
+}
+
+export function Habit(props: HabitProps) {
 
   return (
-    <h1>Habit</h1>
+    <h1>{props.completed}</h1>
   )
 }
