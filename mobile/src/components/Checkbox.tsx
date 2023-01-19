@@ -3,11 +3,11 @@ import { Feather } from '@expo/vector-icons';
 import colors from "tailwindcss/colors";
 
 interface Props extends TouchableOpacityProps {
-  frequency: string;
+  title: string;
   checked?: boolean;
 }
 
-export function Checkbox({ frequency, checked = false, ...rest }: Props) {
+export function Checkbox({ title, checked = false, ...rest }: Props) {
   return (
     <TouchableOpacity
       activeOpacity={0.7}
@@ -29,7 +29,7 @@ export function Checkbox({ frequency, checked = false, ...rest }: Props) {
       }
 
       <Text className="text-white ml-3">
-        {frequency}
+        {title}
       </Text>
 
     </TouchableOpacity>

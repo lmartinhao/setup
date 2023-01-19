@@ -58,7 +58,7 @@ export function New() {
             return (
               <Checkbox
                 key={`${day} - ${i}`}
-                frequency={day}
+                title={day}
                 checked={weekDays.includes(i)}
                 onPress={() => handleToggleWeekDay(i)}
               />
