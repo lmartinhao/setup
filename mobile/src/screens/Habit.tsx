@@ -3,6 +3,7 @@ import { useRoute } from "@react-navigation/native";
 import dayjs from "dayjs";
 
 import { BackButton } from "../components/BackButton";
+import { ProgressBar } from "../components/ProgressBar";
 
 interface Params {
   date: string;
@@ -33,6 +34,8 @@ export function Habit() {
         <Text className="text-white font-extrabold text-3xl">
           {dayAndMonth}
         </Text>
+
+        <ProgressBar progress={30} />
 
       </ScrollView>
     </View>
