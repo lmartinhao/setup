@@ -10,15 +10,15 @@ export function AppRoutes() {
   return (
     <Navigator screenOptions={{ headerShown: false }}>
       <Screen
-        name="home"
+        name='home'
         component={Home}
       />
       <Screen
-        name="new"
+        name='new'
         component={New}
       />
       <Screen
-        name="habit"
+        name='habit'
         component={Habit}
       />
     </Navigator>
