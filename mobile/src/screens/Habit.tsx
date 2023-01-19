@@ -46,7 +46,7 @@ export function Habit() {
 
           <Checkbox
             title="Caminhar 30min"
-            checked={false}
+            checked={true}
           />
 
         </View>
