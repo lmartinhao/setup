@@ -32,7 +32,7 @@ export function New() {
   async function handleCrateNewHabit() {
     try {
       if(!title.trim() || weekDays.length === 0) {
-        Alert.alert('Novo hábito', 'Parece que você está esquecendo algo: insira um hábito e escolha a periodicidade 👀')
+        return Alert.alert('Novo hábito', 'Parece que você está esquecendo algo: insira um hábito e escolha a periodicidade 👀')
       }
 
       await api.post('/habits', { title, weekDays });
