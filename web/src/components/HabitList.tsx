@@ -22,20 +22,21 @@ export function HabitList({ date, onHandleCompletedChange }: HabitListProps) {
   const [habitsInfo, setHabitsInfo] = useState<HabitsInfoProps>();
 
   useEffect(() => {
-    api.get('/day', {
-      params: {
-        date: date.toISOString(),
+    api.get('day', {
+      params:{
+        date: date.toISOString()
       }
-    }).then((response => {
+    }).then(response => {
       setHabitsInfo(response.data)
-    }))
-  }, [])
+    })
+  },[])
 
   async function handleToggleHabit(habitId: string) {
     const isHabitAlreadyCompleted = habitsInfo!.completedHabits.includes(habitId)
-    let completedHabits: string[] = []
 
     await api.patch(`/habits/${habitId}/toggle`)
+
+    let completedHabits: string[] = []
 
     if (isHabitAlreadyCompleted) {
       completedHabits = habitsInfo!.completedHabits.filter(id => id !== habitId)
